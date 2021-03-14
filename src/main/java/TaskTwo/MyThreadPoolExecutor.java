@@ -3,12 +3,11 @@ package TaskTwo;
 import java.util.concurrent.*;
 
 public class MyThreadPoolExecutor extends ThreadPoolExecutor {
-    private volatile boolean isRunning = true;
 
     public MyThreadPoolExecutor(int nThreads) {
         super(nThreads, nThreads,
                 0L, TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>());
+                new LinkedBlockingQueue<>());
     }
 
     @Override
