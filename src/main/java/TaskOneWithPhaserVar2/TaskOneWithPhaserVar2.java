@@ -59,28 +59,20 @@ class WaterMaker extends Thread {
     }
 }
 
-class Hydrogen implements Callable<String> {
+class Hydrogen{
     private final String name = "H";
 
     public String releaseHydrogen() {
         return name;
     }
 
-    @Override
-    public String call() throws Exception {
-        return name;
-    }
 }
 
-class Oxygen implements Callable<String> {
+class Oxygen{
     private final String name = "O";
 
     public String releaseOxygen() {
         return name;
     }
 
-    @Override
-    public String call() throws Exception {
-        return name;
-    }
 }
